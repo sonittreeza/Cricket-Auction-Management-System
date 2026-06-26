@@ -1,0 +1,109 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "teamName": "Mumbai Mavericks",
+      "budget": 80000000
+    },
+    {
+      "id": 2,
+      "teamName": "Chennai Champions",
+      "budget": 80000000
+    }
+  ],
+  "players": [
+    {
+      "id": 101,
+      "name": "Virat Kohli",
+      "age": 35,
+      "role": "Batsman",
+      "basePrice": 2000000,
+      "soldPrice": 15000000,
+      "battingStyle": "Right-hand bat"
+    },
+    {
+      "id": 102,
+      "name": "Jasprit Bumrah",
+      "age": 30,
+      "role": "Bowler",
+      "basePrice": 2000000,
+      "soldPrice": 14000000,
+      "bowlingStyle": "Right-arm fast"
+    },
+    {
+      "id": 103,
+      "name": "Hardik Pandya",
+      "age": 30,
+      "role": "AllRounder",
+      "basePrice": 2000000,
+      "soldPrice": 9500000,
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "Right-arm fast-medium"
+    },
+    {
+      "id": 104,
+      "name": "Rohit Sharma",
+      "age": 37,
+      "role": "Batsman",
+      "basePrice": 2000000,
+      "soldPrice": 12000000,
+      "battingStyle": "Right-hand bat"
+    },
+    {
+      "id": 105,
+      "name": "Mitchell Starc",
+      "age": 34,
+      "role": "Bowler",
+      "basePrice": 2000000,
+      "soldPrice": 18000000,
+      "bowlingStyle": "Left-arm fast"
+    },
+    {
+      "id": 106,
+      "name": "Ravindra Jadeja",
+      "age": 35,
+      "role": "AllRounder",
+      "basePrice": 2000000,
+      "soldPrice": 10500000,
+      "battingStyle": "Left-hand bat",
+      "bowlingStyle": "Left-arm orthodox"
+    },
+    {
+      "id": 107,
+      "name": "Suryakumar Yadav",
+      "age": 33,
+      "role": "Batsman",
+      "basePrice": 1500000,
+      "soldPrice": 8000000,
+      "battingStyle": "Right-hand bat"
+    },
+    {
+      "id": 108,
+      "name": "Rashid Khan",
+      "age": 25,
+      "role": "Bowler",
+      "basePrice": 1500000,
+      "soldPrice": 11000000,
+      "bowlingStyle": "Right-arm leg-break"
+    },
+    {
+      "id": 109,
+      "name": "Glenn Maxwell",
+      "age": 35,
+      "role": "AllRounder",
+      "basePrice": 1500000,
+      "soldPrice": 7500000,
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "Right-arm off-break"
+    },
+    {
+      "id": 110,
+      "name": "Shubman Gill",
+      "age": 24,
+      "role": "Batsman",
+      "basePrice": 1000000,
+      "soldPrice": 6000000,
+      "battingStyle": "Right-hand bat"
+    }
+  ]
+}

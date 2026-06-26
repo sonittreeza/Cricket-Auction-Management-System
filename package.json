@@ -1,0 +1,18 @@
+{
+  "name": "cricket-auction-manager",
+  "version": "1.0.0",
+  "description": "Cricket Auction Management System using Clean OOP principles and CommonJS in Node.js.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "cricket",
+    "auction",
+    "manager",
+    "oop",
+    "nodejs"
+  ],
+  "author": "Antigravity",
+  "license": "ISC"
+}
