@@ -1,0 +1,57 @@
+# GitHub Actions CI Workflow for Cricket Auction Manager
+# This workflow automates validation, testing, and sanity run checks for every push or PR.
+
+name: Node.js CI
+
+# Controls when the workflow will run
+on:
+  # Trigger the workflow on pushes to the main branch
+  push:
+    branches:
+      - main
+  # Trigger the workflow on pull requests targeting the main branch
+  pull_request:
+    branches:
+      - main
+
+# Defines the jobs to run in this workflow
+jobs:
+  build:
+    name: Build, Validate and Test
+    # Specify the OS runner to use
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the codebase so the runner can access the files
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Install Node.js and cache npm dependencies automatically
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          # Caches the node_modules cache folder to speed up future runs
+          cache: 'npm'
+
+      # Step 3: Install project dependencies using 'npm ci'
+      # 'npm ci' is faster and more strict than 'npm install' as it uses package-lock.json directly
+      - name: Install dependencies
+        run: npm ci
+
+      # Step 4: Verify code formatting if a format script is defined in package.json
+      # Using --if-present prevents the step from failing if the script is not configured
+      - name: Verify code formatting
+        run: npm run format --if-present
+
+      # Step 5: Run linter checks if a lint script is defined in package.json
+      - name: Run lint
+        run: npm run lint --if-present
+
+      # Step 6: Execute unit tests if a test script is defined in package.json
+      - name: Run tests
+        run: npm test --if-present
+
+      # Step 7: Perform a sanity run of the application to ensure it executes without errors
+      - name: Run the application
+        run: node app.js
